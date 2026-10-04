@@ -34,7 +34,6 @@ public class PopupHandle {
 		driver.manage().window().maximize();
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.titleIs("Expected Title"));
 		
 		/*
 		 * WebElement popup = driver.findElement(By.

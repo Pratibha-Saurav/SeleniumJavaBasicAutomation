@@ -2,6 +2,7 @@ package com.selenium.SeleniumProject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -15,7 +16,14 @@ public class DragAndDrop {
 		driver.manage().deleteAllCookies();
 		
 		Actions action = new Actions(driver);
-		action.clickAndHold(driver.findElement(By.xpath("//div[@class='drag-drop-module__m7ivAa__draggableItem ']"))).moveToElement(driver.findElement(By.xpath("//div[@class='drag-drop-module__m7ivAa__dropZone  ']"))).release().build().perform();
+		
+		//1
+		//action.clickAndHold(driver.findElement(By.xpath("//div[@class='drag-drop-module__m7ivAa__draggableItem ']"))).moveToElement(driver.findElement(By.xpath("//div[@class='drag-drop-module__m7ivAa__dropZone  ']"))).release().build().perform();
+		
+		//or, 2
+		WebElement src = driver.findElement(By.xpath("//div[@class='drag-drop-module__m7ivAa__draggableItem ']"));
+		WebElement targ = driver.findElement(By.xpath("//div[@class='drag-drop-module__m7ivAa__dropZone  ']"));
+		action.dragAndDrop(src, targ).perform();
 		
 		String dropText = driver.findElement(By.xpath("//span[@id='result-s01']")).getText();
 		

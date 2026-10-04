@@ -66,7 +66,7 @@ public class FullTest {
 		js.executeScript("window.scrollBy(0, 1200)");
 		
 		//file upload
-		driver.findElement(By.xpath("//input[@id='singleFileInput']")).sendKeys("C:/Users/com/Downloads/upload.PNG");
+		driver.findElement(By.xpath("//input[@id='singleFileInput']")).sendKeys("C:\\Users\\com\\Downloads\\upload.PNG");
 		driver.findElement(By.xpath("//form[@id='singleFileForm']//button")).click();
 		
 		

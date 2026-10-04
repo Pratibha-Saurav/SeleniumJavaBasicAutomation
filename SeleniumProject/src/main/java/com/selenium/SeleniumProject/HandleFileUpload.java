@@ -24,8 +24,9 @@ public class HandleFileUpload {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0, 1200)");
 		
-		//type=file should be present for browse, attach, upload file then only it will work
-		driver.findElement(By.xpath("//*[@id=\"singleFileInput\"]")).sendKeys("C:/Users/com/Downloads/upload.PNG");   //selenium does not handle desktop window popup so cant click
+		
+		//type=file should be present for browse, attach, upload file then only it will work. always use absolute path with \\ not with / - this is escape char in java
+		driver.findElement(By.xpath("//*[@id=\"singleFileInput\"]")).sendKeys("C:\\Users\\com\\Downloads\\upload.PNG");   //selenium does not handle desktop window popup so cant click
 		driver.findElement(By.xpath("//form[@id='singleFileForm']//button")).click();
 	}
 
