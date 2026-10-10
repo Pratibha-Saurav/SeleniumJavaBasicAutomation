@@ -22,6 +22,7 @@ public class HandleWindowPopup {
 		
 		driver.manage().window().maximize();
 		
+		//Scrolls the page by a specific number of pixels relative to wherever the viewport currently is.
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0, 500)");
 		

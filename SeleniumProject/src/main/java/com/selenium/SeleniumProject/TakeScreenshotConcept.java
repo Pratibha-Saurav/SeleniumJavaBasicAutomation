@@ -26,7 +26,7 @@ public class TakeScreenshotConcept {
 		driver.manage().window().maximize();
 		
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src, new File("C:\\Users\\com\\eclipse-workspace\\SeleniumProject\\Resources\\google.png"));
+		FileUtils.copyFile(src, new File("C:\\Users\\priya\\git\\SeleniumJavaBasicAutomation\\SeleniumProject\\Resources\\google.png"));
 		
 		
 		

@@ -31,12 +31,7 @@
     <version>2.20.0</version>
 </dependency>
 
-			<dependency>
-				<groupId>bdd</groupId>
-				<artifactId>APIFramework</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-			</dependency>
-		</dependencies>
+</dependencies>
 	
 
 
